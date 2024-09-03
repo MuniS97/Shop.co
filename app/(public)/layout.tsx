@@ -1,4 +1,4 @@
-import Header from "@/components/client/Header";
+import Header from "@/components/server/Header";
 import Container from "@/components/server/Container";
 
 export default function PublicLayout({

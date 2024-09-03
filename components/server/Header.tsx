@@ -1,7 +1,7 @@
 import Image from "next/image"
-import Navbar from "../server/HeaderNavbar"
+import Navbar from "./HeaderNavbar"
 import { cn } from "@/lib/utils"
-import SearchInput from "./SearchInput"
+import SearchInput from "../client/SearchInput"
 import Link from "next/link"
 import { CircleUserRound, Menu, Search, ShoppingCart } from "lucide-react"
 import {
@@ -28,15 +28,20 @@ interface HeaderProps {
 const Header = ({ className }: HeaderProps) => {
     return (
         <header className={cn("flex items-center justify-between gap-10 max-xl:gap-5", className)}>
-            <Sheet>
-                <SheetTrigger className="md:hidden"><Menu width={24} height={24} /></SheetTrigger>
-                <SheetContent side="left">
-                    <SheetHeader>
-                        <SheetTitle>Menu</SheetTitle>
-                    </SheetHeader>
-                    <Navbar />
-                </SheetContent>
-            </Sheet>
+            {/* burger menu modal */}
+            <div className="md:hidden">
+                <Sheet>
+                    <SheetTrigger ><Menu width={24} height={24} /></SheetTrigger>
+                    <SheetContent side="left">
+                        <SheetHeader>
+                            <SheetTitle>Menu</SheetTitle>
+                        </SheetHeader>
+                        <Navbar />
+                    </SheetContent>
+                </Sheet>
+            </div>
+
+            {/* logo | navbar | searchInput */}
             <Link href={'/'} className="w-full max-w-[140px] max-xl:max-w-[100px]">
                 <Image src="/icons/logo.svg" alt="logo" width={140} height={26} className="object-cover max-xl:w-[100px]" />
             </Link>
@@ -46,6 +51,7 @@ const Header = ({ className }: HeaderProps) => {
             <div className="w-full max-lg:hidden">
                 <SearchInput />
             </div>
+
             <div className="flex items-center gap-4">
                 <Dialog>
                     <DialogTrigger className="lg:hidden"><Search width={24} height={24} /></DialogTrigger>
