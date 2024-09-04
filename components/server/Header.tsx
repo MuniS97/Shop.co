@@ -43,7 +43,7 @@ const Header = ({ className }: HeaderProps) => {
 
             {/* logo | navbar | searchInput */}
             <Link href={'/'} className="w-full max-w-[140px] max-xl:max-w-[100px]">
-                <Image src="/icons/logo.svg" alt="logo" width={140} height={26} className="object-cover max-xl:w-[100px]" />
+                <Image src="/icons/logo.svg" alt="logo" width={140} height={25} className="object-cover max-xl:w-[100px]" />
             </Link>
             <div className="max-md:hidden">
                 <Navbar />
