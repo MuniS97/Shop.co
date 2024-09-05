@@ -19,6 +19,7 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog"
+import { SignedIn, UserButton } from "@clerk/nextjs"
 
 
 interface HeaderProps {
@@ -65,9 +66,12 @@ const Header = ({ className }: HeaderProps) => {
                 <Link href={'/cart'}>
                     <ShoppingCart width={24} height={24} className="max-xl:w-5 h-5" />
                 </Link>
-                <Link href={'/account'}>
+                {/* <Link href={'/account'}>
                     <CircleUserRound width={24} height={24} className="max-xl:w-5 h-5" />
-                </Link>
+                </Link> */}
+                <SignedIn>
+                    <UserButton />
+                </SignedIn>
             </div>
         </header>
     )
