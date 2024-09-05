@@ -19,6 +19,7 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog"
+import { SignedIn, UserButton } from "@clerk/nextjs"
 
 
 interface HeaderProps {
@@ -43,7 +44,7 @@ const Header = ({ className }: HeaderProps) => {
 
             {/* logo | navbar | searchInput */}
             <Link href={'/'} className="w-full max-w-[140px] max-xl:max-w-[100px]">
-                <Image src="/icons/logo.svg" alt="logo" width={140} height={26} className="object-cover max-xl:w-[100px]" />
+                <Image src="/icons/logo.svg" alt="logo" width={140} height={25} className="object-cover max-xl:w-[100px]" />
             </Link>
             <div className="max-md:hidden">
                 <Navbar />
@@ -65,9 +66,12 @@ const Header = ({ className }: HeaderProps) => {
                 <Link href={'/cart'}>
                     <ShoppingCart width={24} height={24} className="max-xl:w-5 h-5" />
                 </Link>
-                <Link href={'/account'}>
+                {/* <Link href={'/account'}>
                     <CircleUserRound width={24} height={24} className="max-xl:w-5 h-5" />
-                </Link>
+                </Link> */}
+                <SignedIn>
+                    <UserButton />
+                </SignedIn>
             </div>
         </header>
     )
