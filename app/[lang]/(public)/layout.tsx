@@ -11,7 +11,6 @@ export default function PublicLayout({
     params: { lang: Locale };
 }>) {
     // const {  } = getDictionary(lang);
-
     return (
         <Container>
             <Header className="my-5" />
