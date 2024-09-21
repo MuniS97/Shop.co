@@ -3,7 +3,7 @@ import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 
 const isPublicRoute = createRouteMatcher(['/sign-in(.*)', '/sign-up(.*)']);
 
-const locales = ['en', 'ru', 'uz'];
+const locales = ['en', 'ru'];
 
 function getLocale(request: NextRequest): string {
     return locales[0];
