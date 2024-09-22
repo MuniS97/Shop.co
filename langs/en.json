@@ -1,4 +1,63 @@
 {
+    "header": {
+        "nav": {
+            "shop": {
+                "text": "Shop",
+                "dropdown": "Shop Categories"
+            },
+            "onSale": {
+                "text": "On Sale"
+            },
+            "newArrivals": {
+                "text": "New Arrivals"
+            },
+            "brands": {
+                "text": "Brands"
+            }
+        },
+        "search": {
+            "placeholder": "Search for products..."
+        }
+    },
+    "footer": {
+        "company": {
+            "title": "COMPANY",
+            "links": {
+                "about": "About",
+                "features": "Features",
+                "works": "Works",
+                "career": "Career"
+            }
+        },
+        "help": {
+            "title": "HELP",
+            "links": {
+                "customerSupport": "Customer Support",
+                "deliveryDetails": "Delivery Details",
+                "termsConditions": "Terms & Conditions",
+                "privacyPolicy": "Privacy Policy"
+            }
+        },
+        "faq": {
+            "title": "FAQ",
+            "links": {
+                "account": "Account",
+                "manageDeliveries": "Manage Deliveries",
+                "orders": "Orders",
+                "payments": "Payments"
+            }
+        },
+        "resources": {
+            "title": "RESOURCES",
+            "links": {
+                "freeEbooks": "Free eBooks",
+                "developmentTutorial": "Development Tutorial",
+                "howToBlog": "How to - Blog",
+                "youtubePlaylist": "Youtube Playlist"
+            }
+        },
+        "description": "We have clothes that suit your style and which you’re proud to wear. From women to men."
+    },
     "homePage": {
         "title": "Home",
         "description": "Home Page"

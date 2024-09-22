@@ -1,4 +1,63 @@
 {
+    "header": {
+        "nav": {
+            "shop": {
+                "text": "Магазин",
+                "dropdown": "Категории магазина"
+            },
+            "onSale": {
+                "text": "Скидки"
+            },
+            "newArrivals": {
+                "text": "Новые поступления"
+            },
+            "brands": {
+                "text": "Бренды"
+            }
+        },
+        "search": {
+            "placeholder": "Искать товары..."
+        }
+    },
+    "footer": {
+        "company": {
+            "title": "COMPANY",
+            "links": {
+                "about": "About",
+                "features": "Features",
+                "works": "Works",
+                "career": "Career"
+            }
+        },
+        "help": {
+            "title": "HELP",
+            "links": {
+                "customerSupport": "Customer Support",
+                "deliveryDetails": "Delivery Details",
+                "termsConditions": "Terms & Conditions",
+                "privacyPolicy": "Privacy Policy"
+            }
+        },
+        "faq": {
+            "title": "Часто задаваемые вопросы",
+            "links": {
+                "account": "Account",
+                "manageDeliveries": "Manage Deliveries",
+                "orders": "Orders",
+                "payments": "Payments"
+            }
+        },
+        "resources": {
+            "title": "RESOURCES",
+            "links": {
+                "freeEbooks": "Free eBooks",
+                "developmentTutorial": "Development Tutorial",
+                "howToBlog": "How to - Blog",
+                "youtubePlaylist": "Youtube Playlist"
+            }
+        },
+        "description": "We have clothes that suit your style and which you’re proud to wear. From women to men."
+    },
     "homePage": {
         "title": "Главная",
         "description": "Главная страница"
