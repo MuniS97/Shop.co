@@ -6,10 +6,49 @@ import Link from "next/link"
 
 interface FooterProps {
     className?: string
+    translation: {
+        company: {
+            title: string;
+            links: {
+                about: string;
+                features: string;
+                works: string;
+                career: string;
+            };
+        };
+        help: {
+            title: string;
+            links: {
+                customerSupport: string;
+                deliveryDetails: string;
+                termsConditions: string;
+                privacyPolicy: string;
+            };
+        };
+        faq: {
+            title: string;
+            links: {
+                account: string;
+                manageDeliveries: string;
+                orders: string;
+                payments: string;
+            };
+        };
+        resources: {
+            title: string;
+            links: {
+                freeEbooks: string;
+                developmentTutorial: string;
+                howToBlog: string;
+                youtubePlaylist: string;
+            };
+        };
+        description: string;
+    }
 }
 
 
-const Footer = ({ className }: FooterProps) => {
+const Footer = ({ className, translation }: FooterProps) => {
 
     return (
         <footer className={cn("flex justify-center items-center flex-col gap-7", className)}>

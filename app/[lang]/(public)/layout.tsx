@@ -3,19 +3,19 @@ import Container from "@/components/server/Container";
 import Footer from "@/components/server/Footer";
 import { getDictionary, Locale } from "@/lib/dictionaries";
 
-export default function PublicLayout({
+export default async function PublicLayout({
     children,
     params: { lang },
 }: Readonly<{
     children: React.ReactNode;
     params: { lang: Locale };
 }>) {
-    // const {  } = getDictionary(lang);
+    const { header, footer } = await getDictionary(lang);
     return (
         <Container>
-            <Header className="my-5" />
+            <Header className="my-5" translation={header} />
             {children}
-            <Footer />
+            <Footer translation={footer} />
         </Container>
     );
 }

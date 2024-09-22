@@ -24,9 +24,29 @@ import { SignedIn, UserButton } from "@clerk/nextjs"
 
 interface HeaderProps {
     className?: string
+    translation: {
+        nav: {
+            shop: {
+                text: string;
+                dropdown: string;
+            };
+            onSale: {
+                text: string;
+            };
+            newArrivals: {
+                text: string;
+            };
+            brands: {
+                text: string;
+            };
+        };
+        search: {
+            placeholder: string;
+        };
+    };
 }
 
-const Header = ({ className }: HeaderProps) => {
+const Header = ({ className, translation }: HeaderProps) => {
     return (
         <header className={cn("flex items-center justify-between gap-10 max-xl:gap-5", className)}>
             {/* burger menu modal */}
