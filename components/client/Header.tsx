@@ -1,7 +1,5 @@
 import Image from "next/image"
-import Navbar from "./HeaderNavbar"
 import { cn } from "@/lib/utils"
-import SearchInput from "../client/SearchInput"
 import Link from "next/link"
 import { CircleUserRound, Menu, Search, ShoppingCart } from "lucide-react"
 import {
@@ -14,33 +12,32 @@ import {
 import {
     Dialog,
     DialogContent,
-    DialogDescription,
     DialogHeader,
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog"
-import { SignedIn, UserButton } from "@clerk/nextjs"
+import Navbar from "../server/HeaderNavbar"
+import SearchInput from "./SearchInput"
 
 
 interface HeaderProps {
     className?: string
     translation: {
-        nav: {
-            shop: {
-                text: string;
-                dropdown: string;
+        navbar: {
+            menu: string
+            gettingStarted: {
+                title: string;
+                types: {
+                    casual: string;
+                    classic: string;
+                };
             };
-            onSale: {
-                text: string;
-            };
-            newArrivals: {
-                text: string;
-            };
-            brands: {
-                text: string;
-            };
+            onSale: string;
+            newArrivals: string;
+            brands: string;
         };
         search: {
+            title: string;
             placeholder: string;
         };
     };
@@ -55,9 +52,9 @@ const Header = ({ className, translation }: HeaderProps) => {
                     <SheetTrigger ><Menu width={24} height={24} /></SheetTrigger>
                     <SheetContent side="left">
                         <SheetHeader>
-                            <SheetTitle>Menu</SheetTitle>
+                            <SheetTitle>{translation.navbar.menu}</SheetTitle>
                         </SheetHeader>
-                        <Navbar />
+                        <Navbar translation={translation.navbar} />
                     </SheetContent>
                 </Sheet>
             </div>
@@ -67,10 +64,10 @@ const Header = ({ className, translation }: HeaderProps) => {
                 <Image src="/icons/logo.svg" alt="logo" width={140} height={25} className="object-cover max-xl:w-[100px]" />
             </Link>
             <div className="max-md:hidden">
-                <Navbar />
+                <Navbar translation={translation.navbar} />
             </div>
             <div className="w-full max-lg:hidden">
-                <SearchInput />
+                <SearchInput translation={translation.search} />
             </div>
 
             <div className="flex items-center gap-4">
@@ -78,20 +75,17 @@ const Header = ({ className, translation }: HeaderProps) => {
                     <DialogTrigger className="lg:hidden"><Search width={24} height={24} /></DialogTrigger>
                     <DialogContent>
                         <DialogHeader>
-                            <DialogTitle>Search</DialogTitle>
+                            <DialogTitle>{translation.search.title}</DialogTitle>
                         </DialogHeader>
-                        <SearchInput />
+                        <SearchInput translation={translation.search} />
                     </DialogContent>
                 </Dialog>
                 <Link href={'/cart'}>
                     <ShoppingCart width={24} height={24} className="max-xl:w-5 h-5" />
                 </Link>
-                {/* <Link href={'/account'}>
+                <Link href={'/account'}>
                     <CircleUserRound width={24} height={24} className="max-xl:w-5 h-5" />
-                </Link> */}
-                <SignedIn>
-                    <UserButton />
-                </SignedIn>
+                </Link>
             </div>
         </header>
     )

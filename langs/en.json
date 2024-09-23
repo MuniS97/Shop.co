@@ -1,21 +1,20 @@
 {
     "header": {
-        "nav": {
-            "shop": {
-                "text": "Shop",
-                "dropdown": "Shop Categories"
+        "navbar": {
+            "menu": "Menu",
+            "gettingStarted": {
+                "title": "Getting started",
+                "types": {
+                    "casual": "Casual",
+                    "classic": "Classic"
+                }
             },
-            "onSale": {
-                "text": "On Sale"
-            },
-            "newArrivals": {
-                "text": "New Arrivals"
-            },
-            "brands": {
-                "text": "Brands"
-            }
+            "onSale": "On Sale",
+            "newArrivals": "New Arrivals",
+            "brands": "Brands"
         },
         "search": {
+            "title": "Search",
             "placeholder": "Search for products..."
         }
     },
