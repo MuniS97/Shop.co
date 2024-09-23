@@ -1,6 +1,6 @@
 import Header from "@/components/server/Header";
 import Container from "@/components/server/Container";
-import Footer from "@/components/server/Footer";
+import Footer from "@/components/client/Footer";
 import { getDictionary, Locale } from "@/lib/dictionaries";
 
 export default async function PublicLayout({
