@@ -3,22 +3,21 @@ import 'server-only';
 
 interface Dictionary {
     header: {
-        nav: {
-            shop: {
-                text: string;
-                dropdown: string;
+        navbar: {
+            menu: string
+            gettingStarted: {
+                title: string;
+                types: {
+                    casual: string;
+                    classic: string;
+                };
             };
-            onSale: {
-                text: string;
-            };
-            newArrivals: {
-                text: string;
-            };
-            brands: {
-                text: string;
-            };
+            onSale: string;
+            newArrivals: string;
+            brands: string;
         };
         search: {
+            title: string;
             placeholder: string;
         };
     };

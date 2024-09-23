@@ -1,62 +1,61 @@
 {
     "header": {
-        "nav": {
-            "shop": {
-                "text": "Магазин",
-                "dropdown": "Категории магазина"
+        "navbar": {
+            "menu": "Меню",
+            "gettingStarted": {
+                "title": "Начало работы",
+                "types": {
+                    "casual": "Повседневный",
+                    "classic": "Классический"
+                }
             },
-            "onSale": {
-                "text": "Скидки"
-            },
-            "newArrivals": {
-                "text": "Новые поступления"
-            },
-            "brands": {
-                "text": "Бренды"
-            }
+            "onSale": "Распродажа",
+            "newArrivals": "Новинки",
+            "brands": "Бренды"
         },
         "search": {
+            "title": "Поиск",
             "placeholder": "Искать товары..."
         }
     },
     "footer": {
         "company": {
-            "title": "COMPANY",
+            "title": "КОМПАНИЯ",
             "links": {
-                "about": "About",
-                "features": "Features",
-                "works": "Works",
-                "career": "Career"
+                "about": "О нас",
+                "features": "Особенности",
+                "works": "Работы",
+                "career": "Карьера"
             }
         },
         "help": {
-            "title": "HELP",
+            "title": "ПОМОЩЬ",
             "links": {
-                "customerSupport": "Customer Support",
-                "deliveryDetails": "Delivery Details",
-                "termsConditions": "Terms & Conditions",
-                "privacyPolicy": "Privacy Policy"
+                "customerSupport": "Служба поддержки",
+                "deliveryDetails": "Детали доставки",
+                "termsConditions": "Условия и положения",
+                "privacyPolicy": "Политика конфиденциальности"
             }
         },
         "faq": {
-            "title": "Часто задаваемые вопросы",
+            "title": "ЧАСТЫЕ ВОПРОСЫ",
             "links": {
-                "account": "Account",
-                "manageDeliveries": "Manage Deliveries",
-                "orders": "Orders",
-                "payments": "Payments"
+                "account": "Аккаунт",
+                "manageDeliveries": "Управление доставкой",
+                "orders": "Заказы",
+                "payments": "Платежи"
             }
         },
         "resources": {
-            "title": "RESOURCES",
+            "title": "РЕСУРСЫ",
             "links": {
-                "freeEbooks": "Free eBooks",
-                "developmentTutorial": "Development Tutorial",
-                "howToBlog": "How to - Blog",
-                "youtubePlaylist": "Youtube Playlist"
+                "freeEbooks": "Бесплатные книги",
+                "developmentTutorial": "Учебник разработки",
+                "howToBlog": "Как - Блог",
+                "youtubePlaylist": "Плейлист на YouTube"
             }
         },
-        "description": "We have clothes that suit your style and which you’re proud to wear. From women to men."
+        "description": "У нас есть одежда, которая соответствует вашему стилю и которой вы гордитесь. От женщин до мужчин."
     },
     "homePage": {
         "title": "Главная",
