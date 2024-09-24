@@ -1,3 +1,4 @@
+import { Hero } from "@/components/server/Hero"
 import { getDictionary, Locale } from "@/lib/dictionaries"
 
 const Page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
@@ -5,7 +6,7 @@ const Page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
 
     return (
         <div>
-            {homePage.title}
+            <Hero />
         </div>
     )
 }
