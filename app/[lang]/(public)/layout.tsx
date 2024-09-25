@@ -13,10 +13,14 @@ export default async function PublicLayout({
     const { header, footer } = await getDictionary(lang);
 
     return (
-        <Container>
-            <Header className="my-5" translation={header} />
+        <>
+            <Container>
+                <Header className="my-5" translation={header} />
+            </Container>
             {children}
-            <Footer className="my-5" translation={footer} />
-        </Container>
+            <Container>
+                <Footer className="my-5" translation={footer} />
+            </Container>
+        </>
     );
 }
