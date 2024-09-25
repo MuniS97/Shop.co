@@ -66,6 +66,7 @@ interface Dictionary {
     };
 }
 
+
 export type Locale = 'en' | 'ru';
 
 const dictionaries: Record<Locale, () => Promise<Dictionary>> = {
