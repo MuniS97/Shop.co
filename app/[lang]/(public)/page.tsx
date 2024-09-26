@@ -1,5 +1,7 @@
 import { Brands } from "@/components/server/Brands"
 import Container from "@/components/server/Container"
+import CustomerReviewsCarousel from "@/components/client/CustomReviewsSwiper"
+import BrowseByDressStyle from "@/components/server/DressStyle"
 import { Hero } from "@/components/server/Hero"
 import { Products } from "@/components/server/Products"
 import { Separator } from "@/components/ui/separator"
@@ -17,6 +19,8 @@ const Page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
                 <Separator />
             </Container>
             <Products title="TOP SELLING" />
+            <BrowseByDressStyle />
+            <CustomerReviewsCarousel />
         </main>
     )
 }
